@@ -1,6 +1,7 @@
 import express from 'express';
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
+import userRouter from './routes/user.route.js';
 dotenv.config();
 
 mongoose.connect(process.env.MONGO)
@@ -13,7 +14,10 @@ mongoose.connect(process.env.MONGO)
 });
 
 
+
 const app = express(); 
 app.listen(3002, () => {
     console.log("Server listening at port 3002 !!");
 });
+
+app.use('/api/user',userRouter); 
