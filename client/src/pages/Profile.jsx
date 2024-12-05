@@ -1,11 +1,9 @@
 import React from 'react'
 
-function Profile() {
+export default function Profile() {
   return (
-    <div>
-      Profile
-    </div>
+    <div className='p-3 max-w-lg mx-auto'>
+      <h1 className='text-3xl font-semibold text-center my-7'>Profile</h1>
+      </div>
   )
-}
-
-export default Profile
+};
